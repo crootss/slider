@@ -1,0 +1,79 @@
+
+/* Kontainer utama slider */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide individual */
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+/* Gambar dalam slide */
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay teks */
+.text-overlay {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: #fff;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-overlay h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 1rem;
+}
+
+/* Tombol navigasi dot */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #ff5959;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .text-overlay h2 {
+        font-size: 1.5rem;
+    }
+    .text-overlay p {
+        font-size: 0.9rem;
+    }
+}
