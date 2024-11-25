@@ -12,6 +12,9 @@ body, html {
     overflow: hidden;
     width: 100vw; /* Gunakan lebar penuh viewport */
     margin: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: pan-y;
 }
 
 /* Slider */
