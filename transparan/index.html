@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider with Timer Dots</title>
+    <title>Transparent Slider</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="slider-container">
         <div class="slider">
             <div class="slide">
-                <img src="../image1.jpg" alt="Slide 1">
-                <div class="overlay">
-                    <p>Caption untuk Slide 1</p>
+                <div class="background" style="background-image: url('image1.jpg');"></div>
+                <div class="content">
+                    <h3>KPR BCA</h3>
+                    <h1>Segera Wujudkan Hunian Idaman dengan Bunga KPR BCA</h1>
                 </div>
             </div>
             <div class="slide">
-                <img src="../image2.jpg" alt="Slide 2">
-                <div class="overlay">
-                    <p>Caption untuk Slide 2</p>
+                <div class="background" style="background-image: url('image2.jpg');"></div>
+                <div class="content">
+                    <h3>KPR Promo</h3>
+                    <h1>Kesempatan Dapatkan Rumah dengan Penawaran Terbaik</h1>
                 </div>
             </div>
             <div class="slide">
-                <img src="../image3.jpg" alt="Slide 3">
-                <div class="overlay">
-                    <p>Caption untuk Slide 3</p>
+                <div class="background" style="background-image: url('image3.jpg');"></div>
+                <div class="content">
+                    <h3>Promo Spesial</h3>
+                    <h1>Nikmati Suku Bunga Terbaik untuk Masa Depan Anda</h1>
                 </div>
             </div>
         </div>
@@ -32,6 +35,10 @@
             <span class="dot"><span class="progress"></span></span>
             <span class="dot"><span class="progress"></span></span>
             <span class="dot"><span class="progress"></span></span>
+        </div>
+        <div class="navigation">
+            <button class="prev">&#8249;</button>
+            <button class="next">&#8250;</button>
         </div>
     </div>
     <script src="script.js"></script>
