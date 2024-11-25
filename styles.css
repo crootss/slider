@@ -1,11 +1,9 @@
-
 /* Kontainer utama slider */
 .slider-container {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 /* Slider */
@@ -22,7 +20,7 @@
 
 /* Gambar dalam slide */
 .slide img {
-    width: 100%;
+    width: 100vw; /* Membuat gambar memenuhi seluruh lebar viewport */
     height: auto;
     display: block;
 }
