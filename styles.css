@@ -1,8 +1,16 @@
+/* Reset margin dan padding untuk body dan kontainer utama */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Hindari scroll horizontal */
+}
+
 /* Kontainer utama slider */
 .slider-container {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 100vw; /* Gunakan lebar penuh viewport */
     margin: 0;
 }
 
@@ -14,13 +22,13 @@
 
 /* Slide individual */
 .slide {
-    min-width: 100%;
+    min-width: 100vw; /* Pastikan setiap slide memiliki lebar penuh viewport */
     position: relative;
 }
 
 /* Gambar dalam slide */
 .slide img {
-    width: 100vw; /* Membuat gambar memenuhi seluruh lebar viewport */
+    width: 100vw; /* Pastikan gambar memenuhi seluruh lebar viewport */
     height: auto;
     display: block;
 }
