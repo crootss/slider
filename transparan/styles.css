@@ -11,7 +11,7 @@ body, html {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 50vh; /* Atur tinggi slider */
+    height: 50vh;
 }
 
 /* Slider */
@@ -40,7 +40,7 @@ body, html {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparan */
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -58,14 +58,37 @@ body, html {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    position: relative;
+    width: 16px;
+    height: 16px;
     background: #ccc;
     border-radius: 50%;
+    overflow: hidden;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .dot.active {
     background: #fff;
+}
+
+.dot .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progress 5s linear infinite;
+}
+
+/* Keyframes untuk animasi timer */
+@keyframes progress {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
 }
