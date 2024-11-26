@@ -12,8 +12,8 @@ body, html {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 50vh; /* Slider memenuhi 50% dari tinggi layar */
-    max-height: 600px; /* Batas maksimum tinggi slider */
+    height: 25vh; /* Slider memenuhi 50% dari tinggi layar */
+    max-height: 300px; /* Batas maksimum tinggi slider */
 }
 
 /* Slider */
