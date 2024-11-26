@@ -12,15 +12,15 @@ body, html {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 25vh; /* Slider memenuhi 50% dari tinggi layar */
-    max-height: 300px; /* Batas maksimum tinggi slider */
+    height: 25vh; /* Slider memenuhi 25% dari tinggi layar */
+    max-height: 300px; /* (Opsional) Batas maksimum tinggi slider */
 }
 
 /* Slider */
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%;
+    height: 100%; /* Tinggi slider sesuai dengan kontainer */
 }
 
 /* Slide */
@@ -50,8 +50,8 @@ body, html {
     color: #fff; /* Warna teks putih */
     text-align: center; /* Teks rata tengah */
     background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan hitam */
-    padding: 20px; /* Ruang di dalam overlay */
-    border-radius: 10px; /* Sudut melengkung pada latar belakang */
+    padding: 10px; /* Ruang di dalam overlay */
+    border-radius: 5px; /* Sudut melengkung pada latar belakang */
     max-width: 80%; /* Batas maksimal lebar overlay */
 }
 
@@ -67,8 +67,8 @@ body, html {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: #ccc;
     border-radius: 50%;
     cursor: pointer;
