@@ -1,88 +1,122 @@
-/* Reset margin dan padding untuk body dan kontainer utama */
+/* Reset margin dan padding */
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Hindari scroll horizontal */
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
 }
 
-/* Kontainer utama slider */
+/* Kontainer slider */
 .slider-container {
     position: relative;
-    overflow: hidden;
-    width: 100vw; /* Gunakan lebar penuh viewport */
-    margin: 0;
-    user-select: none;
-    -webkit-user-drag: none;
-    touch-action: pan-y;
+    overflow: hidden; /* Sembunyikan elemen yang keluar */
+    width: 100vw;
+    height: 50vh; /* Slider memenuhi 50% dari tinggi layar */
+    max-height: 600px; /* Batas maksimum tinggi slider */
 }
 
 /* Slider */
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    height: 100%; /* Tinggi slider sama dengan kontainer */
 }
 
-/* Slide individual */
+/* Slide */
 .slide {
-    min-width: 100vw; /* Pastikan setiap slide memiliki lebar penuh viewport */
+    min-width: 100vw;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Sembunyikan elemen gambar yang keluar */
 }
 
 /* Gambar dalam slide */
 .slide img {
-    width: 100vw; /* Pastikan gambar memenuhi seluruh lebar viewport */
-    height: auto;
-    display: block;
+    width: 100%; /* Penuhi lebar kontainer */
+    height: 100%; /* Penuhi tinggi kontainer */
+    object-fit: cover; /* Pangkas gambar secara proporsional agar sesuai kontainer */
 }
 
-/* Overlay teks */
-.text-overlay {
+/* Overlay konten teks */
+.content {
     position: absolute;
-    bottom: 20%;
-    left: 10%;
+    z-index: 2;
+    text-align: center;
     color: #fff;
-    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 80%;
 }
 
-.text-overlay h2 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-.text-overlay p {
-    font-size: 1rem;
-}
-
-/* Tombol navigasi dot */
+/* Navigasi dots */
 .dots {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 5px;
+    gap: 10px;
+    z-index: 3;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background: #ccc;
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .dot.active {
-    background: #ff5959;
+    background: #fff;
+}
+
+/* Tombol navigasi */
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    outline: none;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
 }
 
 /* Responsivitas */
 @media (max-width: 768px) {
-    .text-overlay h2 {
-        font-size: 1.5rem;
+    .slider-container {
+        height: 40vh; /* Kurangi tinggi slider untuk layar kecil */
+        max-height: 400px; /* Batas maksimum tinggi pada mobile */
     }
-    .text-overlay p {
-        font-size: 0.9rem;
+
+    .content {
+        padding: 10px;
+        font-size: 0.9rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+
+    button {
+        font-size: 1.5rem;
+        padding: 8px;
     }
 }
